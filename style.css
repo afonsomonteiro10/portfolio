@@ -1,3 +1,68 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container que centraliza os elementos verticalmente */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Cada lado do layout */
+.split {
+  flex: 1; /* Distribui o espaço igualmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  transition: flex 0.5s; /* Transição suave quando o tamanho muda */
+}
+
+/* Efeito de hover no lado sobre o qual o rato está posicionado */
+.split:hover {
+  flex: 2; /* Aumenta o tamanho do lado selecionado */
+}
+
+/* Estilo do lado esquerdo */
+.left {
+  background-image: url(img/ciber.jpg);
+  background-color: #252525;
+  color: white;
+}
+
+/* Estilo do lado direito */
+.right {
+  background-image: url(img/marketing.jpg);
+  background-color: white;
+  color: #252525;
+}
+
+/* Estilo do botão esquerdo */
+.buttonl{
+  background-color: #ffffff;
+  color: #252525;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Transição suave no hover */
+}
+
+/* Estilo do botão direita */
+.buttonr{
+  background-color: #252525;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Transição suave no hover */
+}
+
+/* Efeito de hover no botões */
+.buttonl:hover, .buttonr:hover {
+  background-color: #525252c9;
+  color: white;
 }
