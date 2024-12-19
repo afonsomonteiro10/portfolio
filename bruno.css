@@ -1,6 +1,156 @@
-body {
-    padding: 0;
+* {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Header/Nav */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    color: #a1ee25;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #a1ee25;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 4rem;
+  }
+  
+  .hero-image {
+    flex: 1;
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #a1ee25;
+  }
+  
+  .hero-content p {
+    color: #888;
+    margin-bottom: 2rem;
+  }
+  
+  .highlight {
+    color: #a1ee25;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #a1ee25;
+    color: #a1ee25;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .social-icons a:hover {
+    background-color: #a1ee25;
+    color: #000;
+  }
+  
+  /* Hire Me Button */
+  .hire-me {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #a1ee25;
+    color: #a1ee25;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s;
+  }
+  
+  .hire-me:hover {
+    background-color: #a1ee25;
+    color: #000;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+  
+    .nav-links {
+        display: none;
+    }
+  
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+  
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+  
+    .social-icons {
+        justify-content: center;
+    }
+  }
