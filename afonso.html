@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <title>Afonso - CyberSec Portfolio</title>
     <link rel="stylesheet" href="afonso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -17,9 +18,21 @@
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links-mobile">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-image">
             <img src="img/afonso.jpeg" alt="Afonso">
         </div>
@@ -38,5 +51,35 @@
             <a href="#contact" class="hire-me">Hire me</a>
         </div>
     </section>
+
+    <section id="skills" class="section section-right">
+        <h2>Skills</h2>
+        <p>Detalhe suas habilidades aqui.</p>
+    </section>
+
+    <section id="education" class="section section-left">
+        <h2>Education</h2>
+        <p>Detalhe sua educação aqui.</p>
+    </section>
+
+    <section id="experience" class="section section-right">
+        <h2>Experience</h2>
+        <p>Detalhe sua experiência aqui.</p>
+    </section>
+
+    <section id="contact" class="section section-left">
+        <h2>Contact</h2>
+        <p>Detalhe suas informações de contato aqui.</p>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksMobile = document.querySelector('.nav-links-mobile');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinksMobile.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

@@ -1,14 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
 body {
   background-color: #000;
   color: #fff;
   line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header/Nav */
@@ -16,11 +12,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 10%;
+  padding: 2rem 5%;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
+  background-color: #000;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -44,44 +42,83 @@ nav {
   color: #ff4444;
 }
 
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
-  gap: 4rem;
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-.hero-image {
-  flex: 1;
-  position: relative;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-links-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 70px;
+  right: 5%;
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.nav-links-mobile a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links-mobile a:hover {
+  color: #ff4444;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem 5%;
+  min-height: 100vh;
 }
 
 .hero-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
+  width: 300px;
   border-radius: 50%;
 }
 
 .hero-content {
-  flex: 1;
+  max-width: 600px;
 }
 
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #ff4444;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-content p {
-  color: #888;
   margin-bottom: 2rem;
 }
 
@@ -89,68 +126,99 @@ nav {
   color: #ff4444;
 }
 
+.hire-me {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff4444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hire-me:hover {
+  background-color: #ff0000;
+}
+
 /* Social Icons */
 .social-icons {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #ff4444;
-  color: #ff4444;
-  text-decoration: none;
-  transition: all 0.3s;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  background-color: #ff4444;
-  color: #000;
-}
-
-/* Hire Me Button */
-.hire-me {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border: 1px solid #ff4444;
   color: #ff4444;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: all 0.3s;
 }
 
-.hire-me:hover {
-  background-color: #ff4444;
-  color: #000;
+/* Section Styles */
+.section {
+  padding: 5rem 10%;
+  background-color: #111;
+  color: #fff;
 }
 
-/* Responsividade */
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.section-right {
+  text-align: right;
+}
+
+.section-left {
+  text-align: left;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 100px;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+
+  .hero-image {
+    margin-bottom: 2rem;
   }
 
   .nav-links {
-      display: none;
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .hero-content h1 {
-      font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-content h2 {
-      font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .social-icons {
-      justify-content: center;
+    justify-content: center;
+  }
+
+  .nav-links-mobile {
+    right: 2rem;
+  }
+
+  .section {
+    text-align: center;
   }
 }
