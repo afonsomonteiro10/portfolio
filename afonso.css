@@ -80,6 +80,10 @@ nav {
   border-radius: 5px;
 }
 
+.nav-links-mobile.active {
+  display: flex;
+}
+
 .nav-links-mobile a {
   color: #fff;
   text-decoration: none;
@@ -106,6 +110,7 @@ nav {
 
 .hero-content {
   max-width: 600px;
+  margin-left: 2rem; /* Add margin to separate text from image */
 }
 
 .hero-content h1 {
@@ -192,6 +197,10 @@ nav {
 
   .hero-image {
     margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    margin-left: 0; /* Reset margin for smaller screens */
   }
 
   .nav-links {
