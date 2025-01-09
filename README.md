@@ -10,3 +10,5 @@ https://afonsomonteiro10.github.io/portfolio/
 # Autores
 Afonso Monteiro & Bruno Evangelista
 
+# Código QR
+![codigoqr](img/codigoqr.png)
