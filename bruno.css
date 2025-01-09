@@ -21,6 +21,7 @@
     width: 100%;
     top: 0;
     z-index: 100;
+    background-color: #000;
   }
   
   .logo {
@@ -49,7 +50,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 10%;
     gap: 4rem;
   }
   
@@ -59,10 +60,9 @@
   }
   
   .hero-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 50%;
+    
+    width: 400px;
+    border-radius: 45%;
   }
   
   .hero-content {
@@ -129,6 +129,31 @@
     background-color: #a1ee25;
     color: #000;
   }
+  
+/* Section Styles */
+.section {
+  padding: 5rem 10%;
+  background-color: #000;
+  color: #fff;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.section-right {
+  text-align: right;
+}
+
+.section-left {
+  text-align: left;
+}
   
   /* Responsividade */
   @media (max-width: 768px) {
